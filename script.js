@@ -4,8 +4,10 @@ var content = document.getElementById("content");
 content.innerHTML = "External js content";
 
 var xhr = new XMLHttpRequest()
-xhr.open('GET', 'data.json', false)
-xhr.send()
-xhr = JSON.parse(xhr.response)
-title.innerHTML = xhr.title
-content.innerHTML = xhr.content
+xhr.open('GET', 'data.json', true)
+xhr.onload = function (e) {
+  xhr = JSON.parse(xhr.response)
+  title.innerHTML = xhr.title
+  content.innerHTML = xhr.content
+}
+xhr.send(null)
