@@ -1,0 +1,21 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inline js title</title>
+</head>
+
+<body>
+  <p id="content">Static content</p>
+  <script>
+    var title = document.getElementsByTagName('title')[0]
+    title.innerHTML = 'Inline js title'
+    var content = document.getElementById('content')
+    content.innerHTML = 'Inline js content'
+  </script>
+  <script src="/script.js"></script>
+</body>
+
+</html>
