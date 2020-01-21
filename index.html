@@ -24,10 +24,10 @@
   <p>outterHeight: <div id="out"></div></p>
 </div>
   <script>
-    setInterval(function() {
+    window.addEventListener('resize', function() {
       document.getElementById('in').innerHTML = window.innerHeight
       document.getElementById('out').innerHTML = window.outerHeight
-    }, 200)
+    })
   </script>
 </body>
 </html>
