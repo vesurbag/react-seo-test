@@ -5,11 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Static title</title>
+  <style>
+    body {
+      height: 200vh;
+    }
+
+    .block {
+      position: fixed;
+      top: 0;
+    }
+
+  </style>
 </head>
 
 <body>
+  <div class="block">
   <p>innerHeight: <div id="in"></div></p>
   <p>outterHeight: <div id="out"></div></p>
+</div>
   <script>
     setInterval(function() {
       document.getElementById('in').innerHTML = window.innerHeight
