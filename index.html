@@ -8,16 +8,13 @@
 </head>
 
 <body>
+  <p>innerHeight: <div id="in"></div></p>
+  <p>outterHeight: <div id="out"></div></p>
   <script>
-    window.onload = function () {
-      var title = document.getElementsByTagName('title')[0]
-      title.innerHTML = 'Inline js title'
-      var content = document.getElementById('content')
-      content.innerHTML = 'Inline js content'
-    }
+    setInterval(function() {
+      document.getElementById('in').innerHTML = window.innerHeight
+      document.getElementById('out').innerHTML = window.outerHeight
+    }, 200)
   </script>
-  <script src="/script.js"></script>
-  <p id="content">Static content</p>
 </body>
-
 </html>
